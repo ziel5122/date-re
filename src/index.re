@@ -1,16 +1,20 @@
 open Date;
+open Time;
 
 let date0: date = {
   year: 2018,
   month: February,
-  day: 14,
+  monthIndex: 1,
+  day: 20,
+  hour: 20,
 };
 
 let date1: date = {
   year: 2017,
   month: November,
-  day: 11,
+  monthIndex: 10,
+  day: 20,
+  hour: 22,
 };
 
-numDaysInMonth(2014, 12);
-numDaysInMonth(2013, 9);
+Date.print(date0)

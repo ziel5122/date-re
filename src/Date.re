@@ -1,3 +1,5 @@
+open Printf;
+
 type thirtyDayMonth =
   | April
   | June
@@ -30,16 +32,21 @@ type month =
 type date = {
   year: int,
   month,
+  monthIndex: int,
   day: int,
+  hour: int,
 };
 
-type time = {
-  years: int,
-  months: int,
-  days: int,
-};
+let print = (date as d: date) => {
+  let { year, monthIndex, day, hour } = date;
+  printf("%d %d %d %d\n", year, monthIndex, day, hour);
+}
 
-let numDaysInMonth = (year, month) => {
-  print_int(year); print_newline();
-  print_int(month); print_newline();
-} 
+let timeDifference = (date0, date1) => {
+  let rawDifferences: array(int) = [|
+    date0.year - date1.year,
+    date0.monthIndex - date1.monthIndex,
+    date0.day - date1.day,
+    date0.hour - date1.hour,
+  |];
+}

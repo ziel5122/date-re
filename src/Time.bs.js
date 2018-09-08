@@ -5,7 +5,7 @@ var Block = require("bs-platform/lib/js/block.js");
 var Curry = require("bs-platform/lib/js/curry.js");
 var Printf = require("bs-platform/lib/js/printf.js");
 
-function print(d) {
+function print(time) {
   return Curry._4(Printf.printf(/* Format */[
                   /* Int */Block.__(4, [
                       /* Int_d */0,
@@ -41,13 +41,8 @@ function print(d) {
                         ])
                     ]),
                   "%d %d %d %d\n"
-                ]), d[/* year */0], d[/* monthIndex */2], d[/* day */3], d[/* hour */4]);
-}
-
-function timeDifference(_, _$1) {
-  return /* () */0;
+                ]), time[/* years */0], time[/* months */1], time[/* days */2], time[/* hours */3]);
 }
 
 exports.print = print;
-exports.timeDifference = timeDifference;
 /* No side effect */
