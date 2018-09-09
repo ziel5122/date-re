@@ -1,4 +1,5 @@
 open Date;
+open Print;
 open Time;
 
 let date0: date = {
@@ -17,4 +18,5 @@ let date1: date = {
   hour: 22,
 };
 
-Date.print(date0)
+print_date(date0);
+print_date(date1);
