@@ -1,0 +1,1 @@
+let numMonths = 12;

@@ -1,22 +1,22 @@
 open Date;
-open Print;
+open Month;
 open Time;
 
 let date0: date = {
-  year: 2018,
-  month: February,
-  monthIndex: 1,
-  day: 20,
-  hour: 20,
+  year: 2019,
+  month: November,
+  day: 19,
+  hour: 23,
 };
 
 let date1: date = {
-  year: 2017,
-  month: November,
-  monthIndex: 10,
-  day: 20,
-  hour: 22,
+  year: 2018,
+  month: September,
+  day: 21,
+  hour: 23,
 };
 
-print_date(date0);
-print_date(date1);
+print_string("d0: "); print_date(date0);
+print_string("d1: "); print_date(date1);
+let time0 = timeDifference(date0, date1);
+print_time(time0);

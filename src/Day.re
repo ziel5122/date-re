@@ -1,0 +1,1 @@
+let numHours = 24;
